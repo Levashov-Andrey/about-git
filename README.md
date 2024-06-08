@@ -85,7 +85,7 @@ Git хранит таблицу соответствий хеш → информ
 ### Диаграмма жизненного цикла файлов проекта
 
 ```mermaid
-graph LR
+graph TD
 untracked -- "git add" --> staged;
 modified -- "git add" --> staged;
 staged -- "изменения" --> modified;
