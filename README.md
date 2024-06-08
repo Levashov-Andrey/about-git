@@ -81,4 +81,17 @@ Git хранит таблицу соответствий хеш → информ
 ###4. modified (англ. «изменённый»)
 
 Состояние modified означает, что Git сравнил содержимое файла с последней сохранённой версией и нашёл отличия.
+
+### Диаграмма жизненного цикла файлов проекта
+
+```mermaid
+graph LR
+untracked -- "git add" --> staged;
+modified -- "git add" --> staged;
+staged -- "изменения" --> modified;
+tracked/comitted -- "изменения" --> modified;
+staged    -- "git commit" --> tracked/comitted;
+```
+
+
  
